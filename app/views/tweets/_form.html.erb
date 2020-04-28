@@ -1,0 +1,18 @@
+ <div class = "row">
+ 
+  <%= render 'shared/errors', obj: tweet%>
+
+<%= form_with(model: tweet, local: true) do |form| %>
+
+
+  <div class="field">
+    <%= form.label :tweet %>
+    <%= form.text_area :tweet %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+</div>
+</div>
