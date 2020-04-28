@@ -7,14 +7,21 @@
         <p class="card-text">
           <%= tweet.tweet %>
         </p>
+        <div class="buttons">
+          <%= link_to tweet do %>
+          <i class="fa fa-link font-size-2 px-2"></i>
+          <%end%>
+
+          <%= link_to edit_tweet_path(tweet)  do %>
+          <i class="fa fa-pencil font-size-2 px-2"></i>
+          <%end%>
+
+          <%= link_to tweet, method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <i class="fa fa-close font-size-2 px-2"></i>
+          <%end%>
+        </div>
       </div>
     </div>
-      <!-- <tr>
-        <td><%= tweet.tweet %></td>
-        <td><%= link_to 'Show', tweet %></td>
-        <td><%= link_to 'Edit', edit_tweet_path(tweet) %></td>
-        <td><%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr> -->
     <% end %>
   
 </table>
