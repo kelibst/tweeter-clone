@@ -10,7 +10,21 @@
   </head>
 
   <body>
+  <div class="container d-sm-flex">
+    <div class="col-sm-3">
+      <%= render 'layouts/navigation'%>
+      
+  </div>
   <%= render 'layouts/messages'%>
+   <div class="col-sm-4">
     <%= yield %>
+    </div>
+      <div class="col-sm-4">
+        <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2 bg-light" type="search" placeholder="Search Tweeter" aria-label="Search">
+      
+    </form>
+      </div>
+    </div>
   </body>
 </html>
