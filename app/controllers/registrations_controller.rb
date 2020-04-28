@@ -1,4 +1,4 @@
-class RegistrationsController < Device::RegistrationController
+class RegistrationsController < Devise::RegistrationsController
     
     private
 
