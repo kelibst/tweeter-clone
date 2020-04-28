@@ -1,18 +1,17 @@
- <div class = "row">
+
  
   <%= render 'shared/errors', obj: tweet%>
 
-<%= form_with(model: tweet, local: true) do |form| %>
+<%= simple_form_for @tweet do |form| %>
 
-
-  <div class="field">
-    <%= form.label :tweet %>
-    <%= form.text_area :tweet %>
+  <div class="field form-inputs">
+    <%= form.input :tweet,
+                required: true,
+                autofocus: true,
+                input_html: { rows: 10}%>
   </div>
 
-  <div class="actions">
+  <div class="form-actions py-4">
     <%= form.submit %>
   </div>
 <% end %>
-</div>
-</div>
